@@ -34,6 +34,20 @@
   var header = document.querySelector('.page-header');
   if (header) header.appendChild(btn);
 
+  // Brand wordmark: "Ack" in green, "Agent" in white
+  var title = document.querySelector('.project-name');
+  if (title && title.textContent.indexOf('AckAgent') !== -1) {
+    var ack = document.createElement('span');
+    ack.className = 'brand-ack';
+    ack.textContent = 'Ack';
+    var agent = document.createElement('span');
+    agent.className = 'brand-agent';
+    agent.textContent = 'Agent';
+    title.textContent = '';
+    title.appendChild(ack);
+    title.appendChild(agent);
+  }
+
   // Mermaid with theme awareness
   mermaid.initialize({
     startOnLoad: false,

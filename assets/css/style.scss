@@ -72,17 +72,34 @@ body {
   position: relative;
   background-color: var(--color-sentinel-navy);
   background-image: none;
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
 
   .project-name {
     color: #fff;
     font-weight: 600;
+    margin-bottom: 0.25rem;
   }
 
   .project-tagline {
     color: #fff;
     font-weight: 400;
     opacity: 0.85;
+    margin-bottom: 0.5rem;
   }
+
+  // Brand wordmark colors
+  .brand-ack {
+    color: var(--color-signal-green);
+  }
+
+  .brand-agent {
+    color: #fff;
+  }
+}
+
+@media screen and (min-width: 64em) {
+  .page-header { padding-top: 2rem; padding-bottom: 2rem; }
 }
 
 .btn {
