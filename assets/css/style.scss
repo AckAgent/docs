@@ -78,13 +78,13 @@ body {
 }
 
 .main-content pre {
-  background-color: $sentinel-navy;
-  border: 1px solid darken($sentinel-navy, 5%);
+  background-color: $bg-subtle;
+  border: 1px solid $border-light;
 
   > code {
     background: none;
     border: none;
-    color: #e6e6e6;
+    color: $text-primary;
   }
 }
 
