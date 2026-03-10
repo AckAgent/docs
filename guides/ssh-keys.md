@@ -90,49 +90,49 @@ AckAgent provides shared library providers that work with the standard SSH clien
 
 Add to `~/.ssh/config`:
 
-=== "macOS"
+**macOS:**
 
-    ```
-    Host github.com
-        PKCS11Provider /usr/local/lib/libackagent-pkcs11.dylib
-        IdentitiesOnly yes
+```
+Host github.com
+    PKCS11Provider /usr/local/lib/libackagent-pkcs11.dylib
+    IdentitiesOnly yes
 
-    Host *.example.com
-        PKCS11Provider /usr/local/lib/libackagent-pkcs11.dylib
-        IdentitiesOnly yes
-    ```
+Host *.example.com
+    PKCS11Provider /usr/local/lib/libackagent-pkcs11.dylib
+    IdentitiesOnly yes
+```
 
-=== "Linux"
+**Linux:**
 
-    ```
-    Host github.com
-        PKCS11Provider /usr/local/lib/libackagent-pkcs11.so
-        IdentitiesOnly yes
+```
+Host github.com
+    PKCS11Provider /usr/local/lib/libackagent-pkcs11.so
+    IdentitiesOnly yes
 
-    Host *.example.com
-        PKCS11Provider /usr/local/lib/libackagent-pkcs11.so
-        IdentitiesOnly yes
-    ```
+Host *.example.com
+    PKCS11Provider /usr/local/lib/libackagent-pkcs11.so
+    IdentitiesOnly yes
+```
 
 ### For Ed25519 Keys (Security Key Provider)
 
 Add to `~/.ssh/config`:
 
-=== "macOS"
+**macOS:**
 
-    ```
-    Host github.com
-        PKCS11Provider /usr/local/lib/libackagent-sk.dylib
-        IdentitiesOnly yes
-    ```
+```
+Host github.com
+    PKCS11Provider /usr/local/lib/libackagent-sk.dylib
+    IdentitiesOnly yes
+```
 
-=== "Linux"
+**Linux:**
 
-    ```
-    Host github.com
-        PKCS11Provider /usr/local/lib/libackagent-sk.so
-        IdentitiesOnly yes
-    ```
+```
+Host github.com
+    PKCS11Provider /usr/local/lib/libackagent-sk.so
+    IdentitiesOnly yes
+```
 
 ### Mixed Configuration
 

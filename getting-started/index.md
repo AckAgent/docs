@@ -26,30 +26,6 @@ After setup, you can generate signing keys and configure integrations for Git, S
 
 ## Next Steps
 
-<div class="grid cards" markdown>
-
--   :material-cellphone:{ .lg .middle } **Install Mobile App**
-
-    ---
-
-    Get the AckAgent app for iOS or Android
-
-    [:octicons-arrow-right-24: Install App](install-app.md)
-
--   :material-download:{ .lg .middle } **Install CLI**
-
-    ---
-
-    Install the AckAgent command-line tool on macOS or Linux
-
-    [:octicons-arrow-right-24: Install CLI](install-cli.md)
-
--   :material-qrcode:{ .lg .middle } **First Login**
-
-    ---
-
-    Pair your devices and verify the connection
-
-    [:octicons-arrow-right-24: First Login](first-login.md)
-
-</div>
+- **[Install Mobile App](install-app.md)** — Get the AckAgent app for iOS or Android
+- **[Install CLI](install-cli.md)** — Install the AckAgent command-line tool on macOS or Linux
+- **[First Login](first-login.md)** — Pair your devices and verify the connection

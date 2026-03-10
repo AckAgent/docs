@@ -21,20 +21,20 @@ flowchart LR
 
 **1. Install the Age CLI:**
 
-=== "macOS"
+**macOS:**
 
-    ```bash
-    brew install age
-    ```
+```bash
+brew install age
+```
 
-=== "Linux"
+**Linux:**
 
-    ```bash
-    # Debian/Ubuntu
-    sudo apt install age
+```bash
+# Debian/Ubuntu
+sudo apt install age
 
-    # Or download from GitHub releases
-    ```
+# Or download from GitHub releases
+```
 
 **2. AckAgent CLI with plugin:**
 
@@ -128,20 +128,20 @@ SOPS encrypts specific values in YAML, JSON, or ENV files while keeping keys rea
 
 ### Install SOPS
 
-=== "macOS"
+**macOS:**
 
-    ```bash
-    brew install sops
-    ```
+```bash
+brew install sops
+```
 
-=== "Linux"
+**Linux:**
 
-    ```bash
-    # Download from GitHub releases
-    curl -LO https://github.com/getsops/sops/releases/latest/download/sops-linux-amd64
-    chmod +x sops-linux-amd64
-    sudo mv sops-linux-amd64 /usr/local/bin/sops
-    ```
+```bash
+# Download from GitHub releases
+curl -LO https://github.com/getsops/sops/releases/latest/download/sops-linux-amd64
+chmod +x sops-linux-amd64
+sudo mv sops-linux-amd64 /usr/local/bin/sops
+```
 
 ### Configure SOPS
 

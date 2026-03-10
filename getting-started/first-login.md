@@ -51,8 +51,9 @@ Verify this matches your phone, then approve on your device.
 **On your phone:**
 The app shows the same code with icons.
 
-!!! warning "Codes Must Match"
-    If the codes don't match, **do not approve**. This could indicate a man-in-the-middle attack. Cancel and try again on a different network.
+> **Warning: Codes Must Match**
+>
+> If the codes don't match, **do not approve**. This could indicate a man-in-the-middle attack. Cancel and try again on a different network.
 
 ### 4. Approve on Phone
 

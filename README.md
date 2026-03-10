@@ -1,27 +1,15 @@
 # AckAgent Documentation
 
-Public documentation for [AckAgent](https://ackagent.com), built with [MkDocs](https://www.mkdocs.org/) and [Material for MkDocs](https://squidfunk.github.io/mkdocs-material/).
+Public documentation for [AckAgent](https://ackagent.com), served by [GitHub Pages](https://pages.github.com/) with Jekyll and the Cayman theme.
 
 ## Local Development
 
-### Prerequisites
-
-- Python 3.12+
-
-### Serve locally
-
 ```bash
-make serve
+gem install jekyll bundler
+jekyll serve
 ```
 
-This automatically creates a `.venv`, installs dependencies (`mkdocs`, `mkdocs-material`, `pymdown-extensions`), and starts a live-reload server at http://localhost:8000.
-
-To rebuild from scratch:
-
-```bash
-make clean
-make serve
-```
+Open http://localhost:4000.
 
 ## Publishing
 
@@ -40,24 +28,24 @@ Go to **Actions → Deploy Documentation** → **Run workflow**.
 ## Structure
 
 ```
-├── mkdocs.yml              # Site configuration
-├── docs/
-│   ├── index.md            # Landing page
-│   ├── getting-started/    # Installation & setup
-│   ├── guides/             # Use case guides (git, SSH, etc.)
-│   ├── security/           # Security & privacy docs
-│   └── reference/          # CLI reference & troubleshooting
-├── overrides/              # MkDocs theme overrides
-└── site/                   # Build output (gitignored)
+├── _config.yml             # Jekyll configuration
+├── _includes/
+│   └── head-custom.html    # Mermaid.js injection
+├── index.md                # Landing page
+├── getting-started/        # Installation & setup
+├── guides/                 # Use case guides (git, SSH, etc.)
+├── security/               # Security & privacy docs
+├── reference/              # CLI reference & troubleshooting
+└── assets/                 # SVG icons
 ```
 
 ## Adding Content
 
 1. Create a markdown file in the appropriate directory
-2. Add it to the `nav` section in `mkdocs.yml`
-3. Preview locally with `make serve`
+2. Preview locally with `jekyll serve`
+3. Push to `main` to deploy
 
-Supports [Mermaid diagrams](https://mermaid.js.org/), [admonitions](https://squidfunk.github.io/mkdocs-material/reference/admonitions/), and [content tabs](https://squidfunk.github.io/mkdocs-material/reference/content-tabs/).
+Supports [Mermaid diagrams](https://mermaid.js.org/) via client-side rendering.
 
 ## Related Repos
 

@@ -36,8 +36,9 @@ Download AckAgent from the [Play Store](https://play.google.com/store/apps/detai
 
 The app will generate your device keys automatically. You'll complete account setup when you pair with a Requester using `ackagent login`.
 
-!!! note "Biometric Authentication Required"
-    AckAgent requires Face ID, Touch ID, or fingerprint authentication to be set up on your device. This ensures only you can approve signing requests.
+> **Note: Biometric Authentication Required**
+>
+> AckAgent requires Face ID, Touch ID, or fingerprint authentication to be set up on your device. This ensures only you can approve signing requests.
 
 ## Key Storage
 

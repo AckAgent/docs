@@ -58,19 +58,19 @@ sequenceDiagram
 
 2. **Install the CLI**
 
-    === "macOS"
+    **macOS:**
 
-        ```bash
-        brew install --cask ackagent/tap/ackagent
-        ```
+    ```bash
+    brew install --cask ackagent/tap/ackagent
+    ```
 
-    === "Linux"
+    **Linux:**
 
-        ```bash
-        brew install ackagent/tap/ackagent
-        ```
+    ```bash
+    brew install ackagent/tap/ackagent
+    ```
 
-        deb and rpm packages are also available from [GitHub Releases](https://github.com/ackagent/ackagent/releases).
+    deb and rpm packages are also available from [GitHub Releases](https://github.com/ackagent/ackagent/releases).
 
 3. **Log in and pair your device**
 

@@ -66,10 +66,11 @@ When a request arrives on your phone, you'll see:
 - **Arguments** — the specific command or file operation
 - **Context** — where the request originated from
 
-!!! example "Example Request"
-    **Tool:** Bash
-    **Command:** `npm install express`
-    **Context:** Installing dependencies for web server
+> **Example Request**
+>
+> **Tool:** Bash
+> **Command:** `npm install express`
+> **Context:** Installing dependencies for web server
 
 ## Usage
 

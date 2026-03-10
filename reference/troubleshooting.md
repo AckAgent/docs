@@ -300,8 +300,9 @@ On your phone:
 2. Settings → Account → Sign Out
 3. Sign in again
 
-!!! warning "This removes all local keys"
-    You'll need to regenerate keys and reconfigure integrations (git, SSH, etc.).
+> **Warning: This removes all local keys**
+>
+> You'll need to regenerate keys and reconfigure integrations (git, SSH, etc.).
 
 ---
 

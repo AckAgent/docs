@@ -1,7 +1,0 @@
-/* Dark/light logo switching */
-[data-md-color-scheme="default"] .md-logo .md-logo__image--dark {
-  display: none !important;
-}
-[data-md-color-scheme="slate"] .md-logo .md-logo__image--light {
-  display: none !important;
-}
