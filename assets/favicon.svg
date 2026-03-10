@@ -1,5 +1,4 @@
-<svg width="32" height="32" viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg">
-  <rect width="1024" height="1024" fill="#1B2633"/>
-  <rect x="174" y="174" width="676" height="676" fill="#fff"/>
-  <path d="M 180 490 L 480 780 L 980 160 L 810 20 L 480 590 L 370 360 Z" fill="#1FA971"/>
+<svg width="1024" height="1024" viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg">
+    <path id="Rectangular-Outline-copy" fill="#1b2633" fill-rule="evenodd" stroke="none" d="M 112 913 L 112 113 L 912 113 L 912 913 L 112 913 Z M 174.015503 850.984497 L 849.984497 850.984497 L 849.984497 175.015503 L 174.015503 175.015503 L 174.015503 850.984497 Z"/>
+    <path id="Check" fill="#1fa971" fill-rule="evenodd" stroke="none" d="M 180 490 L 480 780 L 980 160 L 810 20 L 480 590 L 370 360 Z"/>
 </svg>
