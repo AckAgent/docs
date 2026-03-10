@@ -1,0 +1,118 @@
+---
+---
+
+@import "{{ site.theme }}";
+
+// Brand colors
+$sentinel-navy: #1B2633;
+$signal-green: #1FA971;
+$signal-green-strong: #178A5C;
+$bg-subtle: #F6F8FA;
+$border-light: #E9EEF2;
+$text-primary: #1B2633;
+$text-secondary: #475569;
+$text-muted: #6B7280;
+
+// Typography — Inter
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap');
+
+body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;
+  color: $text-primary;
+}
+
+// Header — Sentinel Navy instead of Cayman green gradient
+.page-header {
+  background-color: $sentinel-navy;
+  background-image: none;
+}
+
+.project-name {
+  font-weight: 600;
+}
+
+.project-tagline {
+  font-weight: 400;
+  opacity: 0.85;
+}
+
+// Headings
+h1, h2, h3, h4, h5, h6 {
+  color: $sentinel-navy;
+}
+
+h1, h2 {
+  font-weight: 600;
+}
+
+h3 {
+  font-weight: 500;
+}
+
+// Links — Signal Green
+a {
+  color: $signal-green;
+
+  &:hover {
+    color: $signal-green-strong;
+  }
+}
+
+// Section headings (Cayman uses these for h1/h2 color)
+.main-content {
+  h1, h2 {
+    color: $sentinel-navy;
+    border-bottom-color: $border-light;
+  }
+
+  h3, h4, h5, h6 {
+    color: $sentinel-navy;
+  }
+}
+
+// Code blocks
+.main-content code {
+  background-color: $bg-subtle;
+  border: 1px solid $border-light;
+  color: $text-primary;
+}
+
+.main-content pre {
+  background-color: $sentinel-navy;
+  border: 1px solid darken($sentinel-navy, 5%);
+
+  > code {
+    background: none;
+    border: none;
+    color: #e6e6e6;
+  }
+}
+
+// Tables
+.main-content table th {
+  background-color: $bg-subtle;
+  color: $text-primary;
+}
+
+.main-content table td,
+.main-content table th {
+  border-color: $border-light;
+}
+
+// Blockquotes
+blockquote {
+  border-left-color: $signal-green;
+  color: $text-secondary;
+}
+
+// Header buttons (if using CTA buttons in header)
+.btn {
+  border-color: rgba($signal-green, 0.6);
+  color: rgba(255, 255, 255, 0.9);
+
+  &:hover {
+    background-color: rgba($signal-green, 0.15);
+    border-color: rgba($signal-green, 0.9);
+    color: #fff;
+  }
+}
