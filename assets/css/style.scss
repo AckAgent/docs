@@ -2,117 +2,222 @@
 ---
 
 @import "{{ site.theme }}";
-
-// Brand colors
-$sentinel-navy: #1B2633;
-$signal-green: #1FA971;
-$signal-green-strong: #178A5C;
-$bg-subtle: #F6F8FA;
-$border-light: #E9EEF2;
-$text-primary: #1B2633;
-$text-secondary: #475569;
-$text-muted: #6B7280;
-
-// Typography — Inter
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap');
+
+// Dark theme values (shared by auto-detect and manual toggle)
+@mixin dark-theme-vars {
+  --color-bg-base: #0F172A;
+  --color-bg-subtle: #1B2633;
+  --color-border: #2B3D52;
+  --color-text-primary: #FFFFFF;
+  --color-text-secondary: #CBD5E1;
+  --color-text-muted: #94A3B8;
+  --color-code-bg: #1B2633;
+  --color-code-text: #E2E8F0;
+
+  --syntax-comment: #8B949E;
+  --syntax-keyword: #FF7B72;
+  --syntax-string: #A5D6FF;
+  --syntax-name: #D2A8FF;
+  --syntax-number: #79C0FF;
+  --syntax-builtin: #79C0FF;
+}
+
+// Light theme (default)
+:root {
+  --color-signal-green: #1FA971;
+  --color-signal-green-strong: #178A5C;
+  --color-sentinel-navy: #1B2633;
+
+  --color-bg-base: #FFFFFF;
+  --color-bg-subtle: #F6F8FA;
+  --color-border: #E9EEF2;
+  --color-text-primary: #1B2633;
+  --color-text-secondary: #475569;
+  --color-text-muted: #6B7280;
+  --color-code-bg: #F6F8FA;
+  --color-code-text: #1B2633;
+
+  --syntax-comment: #6A737D;
+  --syntax-keyword: #D73A49;
+  --syntax-string: #032F62;
+  --syntax-name: #6F42C1;
+  --syntax-number: #005CC5;
+  --syntax-builtin: #005CC5;
+}
+
+// Dark: auto-detect (no manual override)
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    @include dark-theme-vars;
+  }
+}
+
+// Dark: manual toggle
+:root[data-theme="dark"] {
+  @include dark-theme-vars;
+}
+
+// ── Base ──────────────────────────────────────
 
 body {
   font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;
-  color: $text-primary;
+  background-color: var(--color-bg-base);
+  color: var(--color-text-primary);
 }
 
-// Header — Sentinel Navy instead of Cayman green gradient
+// ── Header ────────────────────────────────────
+
 .page-header {
-  background-color: $sentinel-navy;
+  position: relative;
+  background-color: var(--color-sentinel-navy);
   background-image: none;
-}
 
-.project-name {
-  font-weight: 600;
-}
+  .project-name {
+    color: #fff;
+    font-weight: 600;
+  }
 
-.project-tagline {
-  font-weight: 400;
-  opacity: 0.85;
-}
-
-// Header text — keep white on navy
-.page-header {
-  .project-name,
   .project-tagline {
     color: #fff;
+    font-weight: 400;
+    opacity: 0.85;
   }
 }
 
-// Content headings
-.main-content {
-  h1, h2 {
-    color: $sentinel-navy;
-    font-weight: 600;
-    border-bottom-color: $border-light;
-  }
-
-  h3, h4, h5, h6 {
-    color: $sentinel-navy;
-  }
-
-  h3 {
-    font-weight: 500;
-  }
-}
-
-// Links — Signal Green
-.main-content a {
-  color: $signal-green;
-
-  &:hover {
-    color: $signal-green-strong;
-  }
-}
-
-// Code blocks
-.main-content code {
-  background-color: $bg-subtle;
-  border: 1px solid $border-light;
-  color: $text-primary;
-}
-
-.main-content pre {
-  background-color: $bg-subtle;
-  border: 1px solid $border-light;
-
-  > code {
-    background: none;
-    border: none;
-    color: $text-primary;
-  }
-}
-
-// Tables
-.main-content table th {
-  background-color: $bg-subtle;
-  color: $text-primary;
-}
-
-.main-content table td,
-.main-content table th {
-  border-color: $border-light;
-}
-
-// Blockquotes
-blockquote {
-  border-left-color: $signal-green;
-  color: $text-secondary;
-}
-
-// Header buttons (if using CTA buttons in header)
 .btn {
-  border-color: rgba($signal-green, 0.6);
+  border-color: rgba(#1FA971, 0.6);
   color: rgba(255, 255, 255, 0.9);
 
   &:hover {
-    background-color: rgba($signal-green, 0.15);
-    border-color: rgba($signal-green, 0.9);
+    background-color: rgba(#1FA971, 0.15);
+    border-color: rgba(#1FA971, 0.9);
     color: #fff;
   }
+}
+
+// ── Content ───────────────────────────────────
+
+.main-content {
+  h1, h2 {
+    color: var(--color-text-primary);
+    font-weight: 600;
+    border-bottom-color: var(--color-border);
+  }
+
+  h3, h4, h5, h6 {
+    color: var(--color-text-primary);
+  }
+
+  h3 { font-weight: 500; }
+
+  a {
+    color: var(--color-signal-green);
+    &:hover { color: var(--color-signal-green-strong); }
+  }
+
+  // Inline code
+  code {
+    background-color: var(--color-code-bg);
+    border: 1px solid var(--color-border);
+    color: var(--color-code-text);
+  }
+
+  // Code blocks
+  pre {
+    background-color: var(--color-code-bg);
+    border: 1px solid var(--color-border);
+
+    > code {
+      background: none;
+      border: none;
+      color: var(--color-code-text);
+    }
+  }
+
+  // Tables
+  table th {
+    background-color: var(--color-bg-subtle);
+    color: var(--color-text-primary);
+  }
+
+  table td, table th {
+    border-color: var(--color-border);
+  }
+
+  table td {
+    color: var(--color-text-primary);
+  }
+
+  // Images & hr
+  img { border-color: var(--color-border); }
+  hr { border-bottom-color: var(--color-border); }
+}
+
+blockquote {
+  border-left-color: var(--color-signal-green);
+  color: var(--color-text-secondary);
+}
+
+// ── Rouge syntax highlighting ─────────────────
+
+.highlight {
+  background: var(--color-code-bg);
+
+  .c, .cm, .c1, .cs, .cp { color: var(--syntax-comment); font-style: italic; }
+  .k, .kd, .kn, .kp, .kr, .kt, .kc { color: var(--syntax-keyword); }
+  .s, .sb, .sc, .sd, .s2, .se, .sh, .si, .sx, .sr, .s1, .ss { color: var(--syntax-string); }
+  .na, .nc, .nd, .ne, .nf, .nl, .nn { color: var(--syntax-name); }
+  .m, .mf, .mh, .mi, .mo { color: var(--syntax-number); }
+  .nb, .no, .nv, .nt, .bp, .vc, .vg, .vi { color: var(--syntax-builtin); }
+  .o, .ow { color: var(--syntax-keyword); }
+  .err { color: var(--syntax-keyword); background: none; }
+}
+
+// ── Theme toggle button ───────────────────────
+
+.theme-toggle {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background: none;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  color: #fff;
+  border-radius: 50%;
+  width: 2.25rem;
+  height: 2.25rem;
+  padding: 0;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: border-color 0.2s;
+
+  &:hover {
+    border-color: rgba(255, 255, 255, 0.7);
+  }
+
+  .icon-sun { display: none; }
+  .icon-moon { display: block; }
+}
+
+// Show sun in dark mode (auto)
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) .theme-toggle {
+    .icon-sun { display: block; }
+    .icon-moon { display: none; }
+  }
+}
+
+// Show sun in dark mode (manual)
+[data-theme="dark"] .theme-toggle {
+  .icon-sun { display: block; }
+  .icon-moon { display: none; }
+}
+
+// ── Smooth transitions (only on toggle, not initial load) ──
+
+body, .main-content, .main-content code, .main-content pre,
+.main-content table th, .main-content table td, blockquote, .highlight {
+  transition: background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease;
 }
