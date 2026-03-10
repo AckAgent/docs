@@ -36,37 +36,37 @@ body {
   opacity: 0.85;
 }
 
-// Headings
-h1, h2, h3, h4, h5, h6 {
-  color: $sentinel-navy;
-}
-
-h1, h2 {
-  font-weight: 600;
-}
-
-h3 {
-  font-weight: 500;
-}
-
-// Links — Signal Green
-a {
-  color: $signal-green;
-
-  &:hover {
-    color: $signal-green-strong;
+// Header text — keep white on navy
+.page-header {
+  .project-name,
+  .project-tagline {
+    color: #fff;
   }
 }
 
-// Section headings (Cayman uses these for h1/h2 color)
+// Content headings
 .main-content {
   h1, h2 {
     color: $sentinel-navy;
+    font-weight: 600;
     border-bottom-color: $border-light;
   }
 
   h3, h4, h5, h6 {
     color: $sentinel-navy;
+  }
+
+  h3 {
+    font-weight: 500;
+  }
+}
+
+// Links — Signal Green
+.main-content a {
+  color: $signal-green;
+
+  &:hover {
+    color: $signal-green-strong;
   }
 }
 
